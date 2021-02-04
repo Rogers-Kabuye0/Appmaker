@@ -1,0 +1,2381 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AppyHTML</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+	<script type="text/javascript" src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+	<script type="text/javascript" src="{% static "js/main.js" %}"></script>
+
+	
+
+	<style type="text/css">
+		.accordion-body-1 li{
+			padding-bottom: 12px;
+		}
+
+		.btn{
+			margin-top: 10px;
+			margin-right: 2px;
+		}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="{% static "css/website.css" %}">
+
+
+	<script type="text/javascript" src="{% static "js/masonry.js" %}"></script>
+
+	<link rel="stylesheet" type="text/css" href="{% static "css/highlight.css" %}">
+	<script type="text/javascript" src="{% static "js/highlight.js" %}"></script>
+
+	<style type="text/css">
+		code{
+			font-size: 12px;
+		}
+        .faceb{
+            background-image: url('{% static "images/hero.jpg" %}');
+        }
+        .head1{
+            font-size: 80px;
+        }
+        .lead{
+            font-weight: 400;
+            color: rgb(70,70,70);
+        }
+        .proc{
+            background-image: url('{% static "images/girl1.jpg" %}');
+        }
+        .catyy{
+            background-image: url('{% static "images/girl2.jpg" %}');
+        }
+        
+
+        .pet{
+            font-size: 40px;
+        }
+        @media (max-width: 800px){
+            .head1{
+                font-size:70px;
+            }
+        }
+        @media (max-width: 600px){
+            .head1{
+                font-size:60px;
+            }
+            .pet{
+                font-size: 27px;
+            }
+        }
+        @media (max-width: 300px){
+            .head1{
+                font-size:40px;
+            }
+        }
+	</style>
+
+	
+</head>
+<body class="m-0 p-0">
+
+	<div class="container-fluid p-0 m-0 sticky-top">
+		  <nav class="navbar navbar-expand-md navbar-dark bg-white shadow-md" aria-label="Fourth navbar example">
+		    <div class="container-fluid">
+		      <a class="navbar-brand text-dark mrmr" href="#">APPYHTML</a>
+		      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="navbar-toggler-icon"></span>
+		      </button>
+
+		      <div class="collapse navbar-collapse" id="navbarsExample04">
+		        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+		          <li class="nav-item active">
+		            <a class="nav-link" aria-current="page" href="#">Home</a>
+		          </li>
+		        </ul>
+		        <div class="container-fluid d-flex justify-content-end pr-5">
+		        	
+		        	<div class="d-flex justify-content-center align-items-center"><p class="p-0 mf-4 mmrp"><i class="fab fa-github"></i></p></div>
+		        	<div class="d-flex justify-content-center dky align-items-center"><p class="p-0 mf-4 mmrp" data-bs-toggle="modal" data-bs-target="#staticBackdropLive" >Docs</p></div>
+		        	<div class="d-flex justify-content-center align-items-center"><p class="p-0 mf-4 mmrp">Support</p></div>
+		        	<a href="{% static "appyhtml.zip" %}" class="mmr"><button class="btn btn-sm bg-red-500 text-light" style="margin:0;">Download <i class="fas fa-download"></i></button></a>
+		        </div>
+		      </div>
+		    </div>
+		  </nav>
+	</div>
+
+	<div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLiveLabel">AppyHTML Notification</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Sorry the documents are not ready yet, So wait for some few days.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<div class="container">
+		<div class="container mt-5">
+			<div class="row m-0 p-0 justify-content-center name mt-5 mb-5">
+				<div class="col-xl-7 col-lg-9 text-center">
+					<p class="head1">AppyHtml</p>
+					<p class="t-blue sm-t">Add material design<br>in your app</p>
+					<a href="{% static "appyhtml.zip" %}" download><button class="btn btn-blue">download</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <div class="container" style="position:sticky; z-index:1000; top:50px;">
+    	<hr>
+    	<div class="nav-scroller p-0 m-0">
+	    	<div class="nav links mb-3" id="nav-tab" role="tablist">
+		        <a class="active bli1" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><div class="fri">Home</div></a>
+		        <a class="bli2" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-components" role="tab" aria-controls="nav-profile" aria-selected="false"><div class="fri">Components</div></a>
+		        <a class="bli3" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-Templates" role="tab" aria-controls="nav-contact" aria-selected="false"><div class="fri">Templates</div></a>
+		        <a class="bli4" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-Personal" role="tab" aria-controls="nav-contact" aria-selected="false"><div class="fri">Signin</div></a>
+		    
+	        </div>
+    	</div>
+    </div>
+
+<div class="container-fluid m-0 p-0">
+
+	<!-- HEARTS   -->      
+	<div class="tab-content p-0 m-0" id="nav-tabContent">
+
+		<!-- page 1 -->
+	    <div class="tab-pane fade show active p-0 m-0" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+	    	<div class="container">
+	    		<p class="mt-5 pet">AppyHTML is here.</p>
+	    		<div class="container mt-3">
+	    			<div class="row m-0 p-0 mb-5">
+	    				<div class="col-md-5 mb-5">
+			    			<p class="lead">Find the the newest material design components made from Bootstrap and using the same stynax, either the same or alike due to some advanced and added features to give your the clear look of MATERIAL DESIGN.</p>
+			    			<p >To get started click the button below.</p>
+			    			<div class="container d-flex justify-content-end text-right"><a href="{% static "appyhtml.zip" %}" download><button class="btn btn-outline-danger btn-rounder">Downloads</button></a></div>
+			    		</div>
+			    		<div class="col-md-5">
+			    			<img src="{% static "images/app2.svg" %}" class="img-fluid">
+			    		</div>
+			    		<div class="col-md-5">
+			    			<img src="{% static "images/js.svg" %}" class="img-fluid"> 
+			    		</div>
+			    		<div class="col-md-5 m-0 mt-5">
+			    			<p class="pet">Did You Know MD ?</p>
+			    			<p class="lead">You can create more that 1 screens on you device. No magic just MD, keeping on adding a shadow on your container element. This creates a 3D like screen but not, it is just confusing.</p>
+			    			<p >Procedure for this effect, get it from the components tab.</p>
+			    		</div>
+			    	</div>
+			    </div>
+
+			    <div class="container mt-5 mb-5">
+			    	<p class="text-center h5">Do you want to contact me.</p>
+			    	<div class="container text-center mt-3">
+			    		<button class="btn-round btn-round-sm btn-primary"><i class="fab fa-twitter"></i></button>
+        				<button class="btn-round btn-round-sm btn-danger"><i class="fab fa-pinterest-p"></i></button>
+        				<button class="btn-round btn-round-sm btn-primary"><i class="fab fa-facebook-f"></i></button>
+        				<button class="btn-round btn-round-sm btn-success"><i class="fab fa-whatsapp"></i></button>
+        				<button class="btn-round btn-round-sm btn-dark"><i class="fab fa-github"></i></button>
+        				<button class="btn-round btn-round-sm btn-link"><i class="fas fa-globe"></i></button>
+        			</div>
+        			<p class="mt-3"><a href="#">moreinfo</a></p>
+			    </div>
+	    	</div>
+	    </div>
+
+	    <!-- page2 -->
+	    <div class="tab-pane fade" id="nav-components" role="tabpanel" aria-labelledby="nav-profile-tab">
+	    	<div class="container-fluid m-0">
+
+	    		<button class="btn showit"><i class="fas fa-bars"></i></button>
+
+	         	<div class="menuyt">
+	         		<img src="{% static "images/resp.svg" %}" class="img-fluid mt-3">
+	         		<ul class="tressy text-dark">
+	         			<li><a href="#"><i class="fas fa-download"></i>&nbsp; Get started</a></li>
+	         			<li><a href="#"><i class="fas fa-file"></i>&nbsp; Documentation</a></li>
+	         			<li><a href="#"><i class="fab fa-android"></i>&nbsp; Apk Packaging</a></li>
+	         			<li><a href="#buttonys">Buttons</a></li>
+	         			<li><a href="#outbut">Outline-buttons</a></li>
+	         			<li><a href="#roubut">Round-buttons</a></li>
+	         			<li><a href="#cbtn">Circular-buttons</a></li>
+	         			<li><a href="#bbadge"><i class="fas fa-id-badge"></i> Badges</a></li>
+	         			<li><a href="#bbadgebtn">Button-badges</a></li>
+	         			<li><span class="accordion-4"><i class="fas fa-pen-fancy"></i>&nbsp; Forms</span>
+							<ul class="accordion-body-4">
+								<li><a href="#nform">Normal Forma</l</li>
+								<li><a href="#floform">Floating forms</a></li>
+								<li><a href="#aniform">Animated Forms</a></li>
+							</ul>
+						</li>
+						<li><a href="#llabel"><i class="fas fa-tags"></i>&nbsp; Label</a></li>
+						<li><a href="#sswitch"><i class="fas fa-toggle-on"></i>&nbsp; Switches</a></li>
+						<li><a href="#hscr"><i class="fas fa-scroll"></i>&nbsp; Horizontal scroll</a></li>
+						<li><a href="#sshadow"><i class="fas fa-"></i> Shadow</a></li>
+						<li><a href="#cardd"><i class="fas fa-address-card"></i>&nbsp; Cards</a></li>
+						<li><a href="#animcard"><i class="fas fa-"></i> Animated Cards</a></li>
+						<li><a href="#procca"><i class="fas fa-user"></i> Profile Cards</a></li>
+						<li><a href="#filtr"><i class="fas fa-project-diagram"></i>&nbsp; File Tree</a></li>
+	         		</ul>
+	         	</div>
+	         	<div class="row m-0 p-0 p-0 m-0 mt-3 justify-content-end">
+	         		
+	         		<div class="col-xl-8 p-0 m-0 col-lg-9 col-md-10 col-sm-12 mopamo m-0 p-0">
+	         			<div class="container-md p-0 mb-5 maget">
+	         				<h1>Colors</h1>
+	         				<p class="mf-5 mt-5 mb-5">Press button to css the documentation of our colors</p>
+	         				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
+					            colors
+					          </button>
+
+<div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true" style="z-index:30000;">
+  <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Appy Colors</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="ftext">Blue</p>
+        <ul class="liet">
+        	<li>text-blue-50</li>
+        	<li>text-blue-100</li>
+        	<li>text-blue-200</li>
+        	<li>text-blue-300</li>
+        	<li>text-blue-400</li>
+        	<li>text-blue-500</li>
+        	<li>text-blue-600</li>
+        	<li>text-blue-700</li>
+        	<li>text-blue-800</li>
+        	<li>text-blue-900</li>
+        	<li class="font-weight-bold" style="margin-top:20px; font-weight:bold;">background</li>
+        	<li>bg-blue-50</li>
+        	<li>bg-blue-100</li>
+        	<li>bg-blue-200</li>
+        	<li>bg-blue-300</li>
+        	<li>bg-blue-400</li>
+        	<li>bg-blue-500</li>
+        	<li>bg-blue-600</li>
+        	<li>bg-blue-700</li>
+        	<li>bg-blue-800</li>
+        	<li>bg-blue-900</li>
+        </ul>
+
+        <p class="ftext">Red</p>
+        <ul class="liet">
+        	<li>text-red-50</li>
+        	<li>text-red-100</li>
+        	<li>text-red-200</li>
+        	<li>text-red-300</li>
+        	<li>text-red-400</li>
+        	<li>text-red-500</li>
+        	<li>text-red-600</li>
+        	<li>text-red-700</li>
+        	<li>text-red-800</li>
+        	<li>text-red-900</li>
+        	<li class="font-weight-bold" style="margin-top:20px; font-weight:bold;">background</li>
+        	<li>bg-red-50</li>
+        	<li>bg-red-100</li>
+        	<li>bg-red-200</li>
+        	<li>bg-red-300</li>
+        	<li>bg-red-400</li>
+        	<li>bg-red-500</li>
+        	<li>bg-red-600</li>
+        	<li>bg-red-700</li>
+        	<li>bg-red-800</li>
+        	<li>bg-red-900</li>
+        </ul>
+
+        <p class="ftext">Green</p>
+        <ul class="liet">
+        	<li>text-green-50</li>
+        	<li>text-green-100</li>
+        	<li>text-green-200</li>
+        	<li>text-green-300</li>
+        	<li>text-green-400</li>
+        	<li>text-green-500</li>
+        	<li>text-green-600</li>
+        	<li>text-green-700</li>
+        	<li>text-green-800</li>
+        	<li>text-green-900</li>
+			<li class="font-weight-bold" style="margin-top:20px; font-weight:bold;">background</li>
+        	<li>bg-green-50</li>
+        	<li>bg-green-100</li>
+        	<li>bg-green-200</li>
+        	<li>bg-green-300</li>
+        	<li>bg-green-400</li>
+        	<li>bg-green-500</li>
+        	<li>bg-green-600</li>
+        	<li>bg-green-700</li>
+        	<li>bg-green-800</li>
+        	<li>bg-green-900</li>
+        </ul>
+
+        <p class="ftext">Amber</p>
+        <ul class="liet">
+        	<li>text-amber-50</li>
+        	<li>text-amber-100</li>
+        	<li>text-amber-200</li>
+        	<li>text-amber-300</li>
+        	<li>text-amber-400</li>
+        	<li>text-amber-500</li>
+        	<li>text-amber-600</li>
+        	<li>text-amber-700</li>
+        	<li>text-amber-800</li>
+        	<li>text-amber-900</li>
+			<li class="font-weight-bold" style="margin-top:20px; font-weight:bold;">background</li>
+        	<li>bg-amber-50</li>
+        	<li>bg-amber-100</li>
+        	<li>bg-amber-200</li>
+        	<li>bg-amber-300</li>
+        	<li>bg-amber-400</li>
+        	<li>bg-amber-500</li>
+        	<li>bg-amber-600</li>
+        	<li>bg-amber-700</li>
+        	<li>bg-amber-800</li>
+        	<li>bg-amber-900</li>
+        </ul>
+
+        <p class="ftext">Purple</p>
+        <ul class="liet">
+	        <li>text-purple-50</li>
+	        <li>text-purple-100</li>
+	        <li>text-purple-200</li>
+	        <li>text-purple-300</li>
+	        <li>text-purple-400</li>
+	        <li>text-purple-500</li>
+	        <li>text-purple-600</li>
+	        <li>text-purple-700</li>
+	        <li>text-purple-800</li>
+	        <li>text-purple-900</li>
+			<li class="font-weight-bold" style="margin-top:20px; font-weight:bold;">background</li>
+	        <li>bg-purple-50</li>
+	        <li>bg-purple-100</li>
+	        <li>bg-purple-200</li>
+	        <li>bg-purple-300</li>
+	        <li>bg-purple-400</li>
+	        <li>bg-purple-500</li>
+	        <li>bg-purple-600</li>
+	        <li>bg-purple-700</li>
+	        <li>bg-purple-800</li>
+	        <li>bg-purple-900</li>
+	    </ul>
+
+        <p class="ftext">Teal</p>
+        <ul class="liet">
+        	<li>text-teal-50</li>
+        	<li>text-teal-100</li>
+        	<li>text-teal-200</li>
+        	<li>text-teal-300</li>
+        	<li>text-teal-400</li>
+        	<li>text-teal-500</li>
+        	<li>text-teal-600</li>
+        	<li>text-teal-700</li>
+        	<li>text-teal-800</li>
+        	<li>text-teal-900</li>
+			<li class="font-weight-bold" style="margin-top:20px; font-weight:bold;">background</li>
+        	<li>bg-teal-50</li>
+        	<li>bg-teal-100</li>
+        	<li>bg-teal-200</li>
+        	<li>bg-teal-300</li>
+        	<li>bg-teal-400</li>
+        	<li>bg-teal-500</li>
+        	<li>bg-teal-600</li>
+        	<li>bg-teal-700</li>
+        	<li>bg-teal-800</li>
+        	<li>bg-teal-900</li>
+        </ul>
+
+        <p class="ftext">Pink</p>
+        <ul class="liet">
+        	<li>text-pink-50</li>
+        	<li>text-pink-100</li>
+        	<li>text-pink-200</li>
+        	<li>text-pink-300</li>
+        	<li>text-pink-400</li>
+        	<li>text-pink-500</li>
+        	<li>text-pink-600</li>
+        	<li>text-pink-700</li>
+        	<li>text-pink-800</li>
+        	<li>text-pink-900</li>
+			<li class="font-weight-bold" style="margin-top:20px; font-weight:bold;">background</li>
+        	<li>bg-pink-50</li>
+        	<li>bg-pink-100</li>
+        	<li>bg-pink-200</li>
+        	<li>bg-pink-300</li>
+        	<li>bg-pink-400</li>
+        	<li>bg-pink-500</li>
+        	<li>bg-pink-600</li>
+        	<li>bg-pink-700</li>
+        	<li>bg-pink-800</li>
+        	<li>bg-pink-900</li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+	         			</div>
+
+	         			<div class="container-fluid p-0 m-0" id="buttonys">
+	         				<h1>Buttons</h1>
+	         				<p>Learn all about bootstrap buttons and remember there is a slite addition or didiction <br
+	         					>from the Bootstrap classes. The new API is simple just catch up.</p><br>
+	         				<p class="betxt">You can use these buttons classes as links without any without addictional CSS just<br> concetrate on your JAVASCRIPT.</p>
+	         				<hr class="mt-5 mb-5">
+
+	         				<div class="container-fluid m-0 p-0">
+	         					<p class="h2 mt-3">Simple-Button</p>
+	         					<div class="mt-5 d-flex justify-content-center">
+	         						<button class="btn btn-primary">appybootstrap</button>
+	         					</div>
+	         					
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy1">copy</button>
+	         							<code class="copy1" style="font-size:12px;">
+&lt;div class="mt-5"/&gt;
+	&lt;button class="btn btn-primary" id="btn"/&gt;appybootstrap&lt;button/&gt;
+&lt;div/&gt;	         								
+	         							</code>
+	         						</pre>
+	         					</div>
+	         					<p class="mt-2 mf-4 alert alert-info">That is a simple button with just class btn btn-primary, advanced for MD was applied.</p>
+
+	         					<hr class="mt-5 mb-3">
+	         				</div>
+
+
+	         				<div class="container-fluid m-0 p-0">
+	         					<p class="h2 mt-3">All-Button</p>
+	         					<div class="mt-5 d-flex justify-content-around flex-wrap">
+	         						<button class="btn btn-primary" id="btn">AppyHTML</button>
+									<button class="btn btn-warning">AppyHTML</button>
+									<button class="btn btn-danger">AppyHTML</button>
+									<button class="btn btn-dark">AppyHTML</button>
+									<button class="btn btn-success">AppyHTML</button>
+									<button class="btn btn-secondary">AppyHTML</button>
+									<button class="btn btn-light">AppyHTML</button>
+									<button class="btn btn-link">AppyHTML</button>
+									<button class="btn btn-black-90">AppyHTML</button>
+	         					</div>
+	         					
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy2">copy</button>
+	         							<code class="copy2" style="font-size:12px;">
+&lt;div class="mt-5"/&gt;
+	&lt;button class="btn btn-primary" id="btn"/&gt;appybootstrap&lt;button/&gt;
+	&lt;button class="btn btn-warning"/&gt;AppyHTML&lt;button/&gt;
+	&lt;button class="btn btn-danger"/&gt;AppyHTML&lt;button/&gt;
+	&lt;button class="btn btn-dark"/&gt;AppyHTML&lt;button/&gt;
+	&lt;button class="btn btn-success"/&gt;AppyHTML&lt;button/&gt;
+	&lt;button class="btn btn-secondary"/&gt;AppyHTML&lt;button/&gt;
+	&lt;button class="btn btn-light"/&gt;AppyHTML&lt;button/&gt;
+	&lt;button class="btn btn-link"/&gt;AppyHTML&lt;button/&gt;
+	&lt;button class="btn btn-black-90"/&gt;AppyHTML&lt;button/&gt;
+	&lt;button class="btn btn-puppy"/&gt;AppyHTML&lt;button/&gt;
+&lt;div/&gt;	         								
+	         							</code>
+	         						</pre>
+	         					</div>
+	         					<p class="h4 mt-3">Anything new.</p>
+	         					<p class="mt-4 alert alert-info mf-4">All these buttons are very familiar if you are a Bootstrap Buddy or have used it. Just  two classes from Boootstrap's API to archive this. But I have advanced them too to look Material Design by adding a shadow, more straighter edges though not, I didn't add any new button but you can use bg-classes I have provided to get new looks.</p>
+
+	         					<hr class="mt-5 mb-3">
+	         				</div>
+
+	         				<div class="container-fluid p-0 maget" id="outbut">
+	         					<h2>Outline-buttons</h2>
+	         					<p class="hecolor mt-2">No much change but made to the button. Hope it works for your browser but it will be best if you develop on -webkit but finalize on Mozilla or safari.<br><br>Transitions for the btn-outline are handled with adding and removing classes but jquery but you can modify with css, follow <span class="text-blue-500" data-bs-toggle="modal" data-bs-target="#staticBackdropLive" >Documentation to do so.</span>.</p>
+	         					<div class="mt-5 mb-5 d-flex justify-content-around flex-wrap">
+	         						<button class="btn btn-outline-primary" id="btn">download</button>
+									<button class="btn btn-outline-warning">download</button>
+									<button class="btn btn-outline-danger">download</button>
+									<button class="btn btn-outline-dark">download</button>
+									<button class="btn btn-outline-success">download</button>
+									<button class="btn btn-outline-secondary">download</button>
+	         					</div>
+
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy3">copy</button>
+	         							<code class="copy3" style="font-size:12px;">
+&lt;div class="mt-5"/&gt;
+	&lt;button class="btn btn-outline-primary" id="btn"/&gt;download&lt;button/&gt;
+	&lt;button class="btn btn-outline-warning"/&gt;download&lt;button/&gt;
+	&lt;button class="btn btn-outline-danger"/&gt;download&lt;button/&gt;
+	&lt;button class="btn btn-outline-dark"/&gt;download&lt;button/&gt;
+	&lt;button class="btn btn-outline-success"/&gt;download&lt;button/&gt;
+	&lt;button class="btn btn-outline-secondary"/&gt;download&lt;button/&gt;
+&lt;div/&gt;	         								
+	         							</code>
+	         						</pre>
+	         					</div>
+	         					<p class="mt-3 alert alert-info" style="font-size:15px;">You can add any border-radius you want to favour your App the way you want it.</p>
+	         				</div>
+
+	         				<div class="container-fluid p-0 maget" id="roubut">
+	         					<h2>Round-buttons</h2>
+	         					<p class="hecolor mt-2">Many Koltin apps are adopting the use of rounded buttons, HTML is good at doing this, So to make our apps native, I wish we would pick an idea from the official App development environment for Android.<br><br>Just add border-radius if you are wishing to use CSS but add btn-rounder not btn-round to get it from AppyHTML.</p>
+	         					<div class="mt-5 mb-5 d-flex flex-wrap justify-content-around">
+	         						<button class="btn btn-outline-primary btn-rounded" style="border-radius:200px;"> AppyHTML</button>
+	         						<button class="btn btn-puppy btn-rounder"> AppyHTML</button>
+	         						<button class="btn btn-outline-danger btn-rounder"> AppyHTML</button>
+									<button class="btn btn-warning btn-rounder">AppyHTML</button>
+	         					</div>
+
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy4">copy</button>
+	         							<code class="copy4" style="font-size:12px;">
+&lt;div class="mt-5"/&gt;
+	&lt;button class="btn btn-outline-primary btn-rounder"/&gt; AppyHTML&lt;button/&gt;
+	&lt;button class="btn btn-puppy btn-rounder"/&gt; AppyHTML&lt;button/&gt;  
+	&lt;button class="btn btn-outline-danger btn-rounder"/&gt; AppyHTML&lt;button/&gt;
+	&lt;button class="btn btn-warning btn-rounder"/&gt;AppyHTML&lt;button/&gt;
+&lt;div/&gt;	         								
+	         							</code>
+	         						</pre>
+	         					</div>
+	         					<p class="mt-3" style="font-size:15px;">Round buttons are now good in MATERIAL DESIGN because they weren't used in the beginning but when they were included, they shown there beauty.</p>
+	         				</div>
+
+	         				<div class="container-fluid p-0 maget" id="cbtn">
+	         					<h2>Circular-buttons</h2>
+	         					<p class="mf-5">Circular buttons are used in as many ways. I will tell you some like Links,  they show specialness and beautify the App.<br>But you have seen them in google apps like the call button and answer button etc. They are all material circular buttons so don't forget to include them in your app.</p>
+	         					<p class="mf-5">I included the small one and the big one. </p>
+
+	         					<p class="h4 mt-5">Single icon</p>
+	         					<div class="mt-3 d-flex justify-content-center">
+	         						<button class="btn-round btn-primary"><span style="font-size:17px;">+</span></button>
+	         					</div>
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy5">copy</button>
+	         							<code class="copy5" style="font-size:12px;">
+&lt;div class="mt-5"/&gt;
+	&lt;button class="btn-round shadow-md btn-primary"/&gt;&lt;span style="font-size:17px;"/&gt;+&lt;span/&gt;&lt;button/&gt;
+&lt;div/&gt;	         								
+	         							</code>
+	         						</pre>
+	         					</div>
+	         					<p class="mf-4 mt-3">Both a letter or an icon are sweetable for the big icon but I don't thing for the small one. Try and leave a view on how it looked. Trust me small icons are best for links.</p>
+
+	         					<div class="mt-3 d-flex justify-content-center">
+	         						<button class="btn-round btn-round-sm btn-dark"><span style="font-size:17px;"><i class="fab fa-github"></i></span></button>
+	         					</div>
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy6">copy</button>
+	         							<code class="copy6" style="font-size:12px;">
+&lt;div class="mt-5"/&gt;
+	&lt;button class="btn-round btn-round-sm shadow-md btn-primary"/&gt;&lt;span style="font-size:17px;"/&gt;+&lt;span/&gt;&lt;button/&gt;
+&lt;div/&gt;	         								
+	         							</code>
+	         						</pre>
+	         					</div>
+	         					<p class="mf-4 mt-3 mb-5 alert alert-info">Both a letter or an icon are sweetable for the big icon but I don't thing for the small one. Try and leave a view on how it looked. Trust me small icons are best for links.</p>
+
+	         					<p class="mf-5">Both letters and icons can be used for these big icons.<br>But add some shadow to have it to standard.</p>
+	         					<div class="mt-5 d-flex justify-content-around flex-wrap">
+	         						<button class="btn-round btn-primary"><span style="font-size:17px;">+</span></button>
+								    <button class="btn-round btn-warning"><i class="fas fa-arrow-right"></i></button>
+								    <button class="btn-round btn-danger"><i class="fas fa-undo"></i></button>
+								    <button class="btn-round btn-puppy"><i class="fas fa-trash"></i></button>
+								    <button class="btn-round btn-secondary"><i class="fas fa-cut"></i></button>
+								    <button class="btn-round btn-success"><i class="fas fa-phone"></i></button>
+								    <button class="btn-round btn-link"><i class="fas fa-globe"></i></button>
+	         					</div>
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy7">copy</button>
+	         							<code class="copy7" style="font-size:12px;">
+&lt;div class="mt-5 d-flex justify-content-around flex-wrap"/&gt;
+	&lt;button class="btn-round btn-primary"/&gt;&lt;span style="font-size:17px;"/&gt;+&lt;span/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-warning"/&gt;&lt;i class="fas fa-envelope"/&gt;&lt;i/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-danger"/&gt;&lt;i class="fab fa-pinterest"/&gt;&lt;i/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-puppy"/&gt;&lt;i class="fas fa-user"/&gt;&lt;i/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-secondary"/&gt;&lt;i class="fas fa-times"/&gt;&lt;i/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-success"/&gt;&lt;i class="fas fa-phone"/&gt;&lt;i/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-link"/&gt;&lt;i class="fas fa-globe"/&gt;&lt;i/&gt;&lt;button/&gt;
+&lt;div/&gt;         								
+	         							</code>
+	         						</pre>
+	         					</div>
+	         					<p class="mf-5">These are the small icons and all look at links or link to something. Now Inthing you can see the beauty of using icons that letters on them.</p>
+	         					<div class="mt-5 d-flex justify-content-around flex-wrap">
+	         						<button class="btn-round btn-round-sm btn-primary"><i class="fab fa-twitter"></i></button>
+			        				<button class="btn-round btn-round-sm btn-danger"><i class="fab fa-pinterest-p"></i></button>
+			        				<button class="btn-round btn-round-sm btn-primary"><i class="fab fa-facebook-f"></i></button>
+			        				<button class="btn-round btn-round-sm btn-success"><i class="fab fa-whatsapp"></i></button>
+			        				<button class="btn-round btn-round-sm btn-dark"><i class="fab fa-github"></i></button>
+			        				<button class="btn-round btn-round-sm btn-link"><i class="fas fa-globe"></i></button>
+	         					</div>
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy8">copy</button>
+	         							<code class="copy8" style="font-size:12px;">
+&lt;div class="mt-5"/&gt;
+	&lt;button class="btn-round btn-round-sm btn-primary"/&gt;&lt;i class="fab fa-twitter"/&gt;&lt;i/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-round-sm btn-danger"/&gt;&lt;i class="fab fa-pinterest-p"/&gt;&lt;i/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-round-sm btn-primary"/&gt;&lt;i class="fab fa-facebook-f"/&gt;&lt;i/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-round-sm btn-success"/&gt;&lt;i class="fab fa-whatsapp"/&gt;&lt;i/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-round-sm btn-dark"/&gt;&lt;i class="fab fa-github"/&gt;&lt;i/&gt;&lt;button/&gt;
+	&lt;button class="btn-round btn-round-sm btn-link"/&gt;&lt;i class="fas fa-globe"/&gt;&lt;i/&gt;&lt;button/&gt;
+&lt;div/&gt;        								
+	         							</code>
+	         						</pre>
+	         					</div>
+	         				</div>
+	         			</div>
+
+
+	         			<div class="container-fluid p-0 m-0 maget" id="bbadge">
+	         				<h2>Badges</h2>
+	         				<p class="mf-15">Badges are used to notify the user of something other new messages or add something to his or her cart. Tat is their most use. Witness fro the messages app and facebook. So they are very much needed in your apps to make them native.</p>
+	         				<p class="mf-15">Badges are custom with the red color but you can change it to ny color you want.</p>
+
+	         				<div class="container-fluid m-0 p-0">
+	         					<p class="h5 mt-3">Normal-Badges</p>
+
+	         					<div class="d-flex mt-5 mb-5 justify-content-center">
+	         						<div class="new-badge">
+										<span id="new-badge-icon"><i class="fas fa-shopping-cart"></i></span>
+										<div class="new-badge-text-short">2</div>&nbsp;&nbsp;<span class="ml-3">Added to cart</span>
+									</div>
+								</div>
+
+								<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy9">copy</button>
+	         							<code class="copy9" style="font-size:12px;">
+&lt;div class="new-badge"/&gt;
+	&lt;span id="new-badge-icon"/&gt;&lt;i class="fas fa-shopping-cart"/&gt;&lt;i/&gt;&lt;span/&gt;
+	&lt;div class="new-badge-text-short"/&gt;2&lt;div/&gt;&nbsp;&nbsp;&lt;span class="ml-3"/&gt;Added to cart&lt;span/&gt;
+&lt;div/&gt;        								
+	         							</code>
+	         						</pre>
+	         					</div>
+	         					<p class="mf-3 mt-3 mb-5 alert alert-info">Badges are best with these colors but you can change.</p>
+
+	         					<p class="mt-5 mb-4">You can change the size of the icon with the font-size property to archive what you what.</p>
+
+	         					<div class="mt-5">
+	         						<div class="new-badge">
+										<span id="new-badge-icon"><i class="fas fa-bell fa-2x"></i></span>
+										<div class="new-badge-text-short">11</div>&nbsp;&nbsp;<span class="ml-3"></span>
+									</div>
+									<div class="new-badge">
+										<span id="new-badge-icon" style="font-size:23px;"><i class="fas fa-bell"></i></span>
+										<div class="new-badge-text-short">9</div>&nbsp;&nbsp;<span class="ml-3"></span>
+									</div>
+									<div class="new-badge">
+										<span id="new-badge-icon" style="font-size:19px;"><i class="fas fa-bell"></i></span>
+										<div class="new-badge-text-short">3</div>&nbsp;&nbsp;<span class="ml-3"></span>
+									</div>
+									<div class="new-badge">
+										<span id="new-badge-icon"><i class="fas fa-bell"></i></span>
+										<div class="new-badge-text-short">7</div>&nbsp;&nbsp;<span class="ml-3"></span>
+									</div>
+	         					</div>
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy10">copy</button>
+	         							<code class="copy10" style="font-size:12px;">
+&lt;div class="mt-5"/&gt;
+	&lt;div class="new-badge"/&gt;
+		&lt;span id="new-badge-icon"/&gt;&lt;i class="fas fa-bell fa-2x"/&gt;&lt;i/&gt;&lt;span/&gt;
+		&lt;div class="new-badge-text-short"/&gt;11&lt;div/&gt;&nbsp;&nbsp;&lt;span class="ml-3"/&gt;&lt;span/&gt;
+	&lt;div/&gt;
+	&lt;div class="new-badge"/&gt;
+		&lt;span id="new-badge-icon" style="font-size:23px;"/&gt;&lt;i class="fas fa-bell"/&gt;&lt;i/&gt;&lt;span/&gt;
+		&lt;div class="new-badge-text-short"/&gt;9&lt;div/&gt;&nbsp;&nbsp;&lt;span class="ml-3"/&gt;&lt;span/&gt;
+	&lt;div/&gt;
+	&lt;div class="new-badge"/&gt;
+		&lt;span id="new-badge-icon" style="font-size:19px;"/&gt;&lt;i class="fas fa-bell"/&gt;&lt;i/&gt;&lt;span/&gt;
+		&lt;div class="new-badge-text-short"/&gt;3&lt;div/&gt;&nbsp;&nbsp;&lt;span class="ml-3"/&gt;&lt;span/&gt;
+	&lt;div/&gt;
+	&lt;div class="new-badge"/&gt;
+		&lt;span id="new-badge-icon"/&gt;&lt;i class="fas fa-bell"/&gt;&lt;i/&gt;&lt;span/&gt;
+		&lt;div class="new-badge-text-short"/&gt;7&lt;div/&gt;&nbsp;&nbsp;&lt;span class="ml-3"/&gt;&lt;span/&gt;
+	&lt;div/&gt;
+&lt;div/&gt;       								
+	         							</code>
+	         						</pre>
+	         					</div>
+
+	         					<h2 id="bbadgebtn" class="maget">Button-Badges</h2>
+	         					<p class="mf-5">Buttons with badges are easily seen and can give a meaning without any addition description or label. They are used in greate websites but don't fear to add them in your app so that it is unique.</p>
+	         					<p class="mf-5">You can change the color too and size with css or sass and less.</p>
+
+	         					<div class="mt-5 mb-5 d-flex justify-content-center">
+	         						<div class="btn-badge">
+										<button class="btn btn-primary">messages</button>
+										<span class="badge-icon"><i class="fas fa-bell"></i></span>
+									</div>
+	         					</div>
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy11">copy</button>
+	         							<code class="copy11" style="font-size:12px;">
+&lt;div class="btn-badge"&gt;
+	&lt;button class="btn btn-primary"&gt;messages&lt;button/&gt;
+	&lt;span class="badge-icon"&gt;&lt;i class="fas fa-bell"/&gt;&lt;i/&gt;&lt;span/&gt;
+&lt;div/&gt;
+	         							</code>
+	         						</pre>
+	         					</div>
+	         					<p class="mf-4 mt-3 mb-5">No customising is added.</p>
+
+	         					<p class="mf-5">Notice that putting too many of these in you app may not be fine to the user. Try to live it native to the environment.</p>
+	         					<div class="mt-5">
+									<div class="btn-badge">
+										<button class="btn btn-warning">Twitter</button>
+										<span class="badge-icon bg-blue"><i class="fab fa-twitter"></i></span>
+									</div>
+									<div class="btn-badge">
+										<button class="btn btn-outline-success">new mail</button>
+										<span class="badge-icon"><i class="fas fa-envelope"></i></span>
+									</div>
+									<div class="btn-badge">
+										<button class="btn btn-secondary">messages</button>
+										<span class="badge-icon"><i class="fas fa-trash"></i></span>
+									</div>
+	         					</div>
+
+	         					<div class="srcode">
+	         						<pre class="prer">
+	         							<button class="copybtn" id="bcopy12">copy</button>
+	         							<code class="copy12" style="font-size:12px;">
+&lt;div class="mt-5"&gt;
+	&lt;div class="btn-badge"&gt;
+		&lt;button class="btn btn-warning"&gt;Twitter&lt;/button&gt;
+		&lt;span class="badge-icon bg-blue"&gt;&lt;i class="fab fa-twitter"&gt;&lt;/i&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="btn-badge"&gt;
+		&lt;button class="btn btn-outline-success"&gt;new mail&lt;/button&gt;
+		&lt;span class="badge-icon"&gt;&lt;i class="fas fa-envelope"&gt;&lt;/i&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="btn-badge"&gt;
+		&lt;button class="btn btn-secondary"&gt;messages&lt;/button&gt;
+		&lt;span class="badge-icon"&gt;&lt;i class="fas fa-trash"&gt;&lt;/i&gt;&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;  								
+	         							</code>
+	         						</pre>
+	         					</div>
+
+	         				</div>
+	         			</div>
+
+	         			<div class="container-fluid p-0 maget">
+	         				<h2>Forms</h2>
+	         				<p class="mf-5">Material design forms are known for the animations. Google textinputs almost all animate, this is included in our kit. But you need to add some CSS to fit you app look.<br>Remember you are a programmer.</p>
+	         				<p class="mf-5">You need to add some consecutive classes to archive this and in time to come you will have to temper with the js file to add yours by just following the documentation.<br>Our js file is well formated and readable since we use alot of jquery.</p>
+
+	         				<p class="mf-4">First the outline has been removed from the bootstrap form.</p>
+	         				<div class="container mt-4 mb-5" id="nform">
+								<form class="form-group">
+									<input type="text" class="form-control" name="">
+								</form>
+							</div>
+							<div class="srcode">
+	         					<pre class="prer">
+	         						<button class="copybtn" id="bcopy13">copy</button>
+	         						<code class="copy13" style="font-size:12px;">
+&lt;form class="form-group"&gt;
+	&lt;input type="text" class="form-control" name=""&gt;
+&lt;/form&gt;
+	         						</code>
+	         					</pre>
+	         				</div>
+
+	         				<div class="container-fluid p-0 mt-5 mb-5" id="floform">
+	         					<p class="mf-5">Inputs with floating labels.<br>Accually, placeholders may not be needed and you can apply a feedback from the some label below.</p>
+								<div class="container mt-4">
+								        <form class="form-group">
+								          <div class="form-floated">
+								            <input type="email" class="form-control">
+								            <label class="label-floated" for="floatingInput">Email address</label>
+								            <label for="floatingInput" class="label-base">Feedback</label>
+								          </div>
+
+								          <div class="form-floated mt-5 mb-5">
+								            <input type="email" class="form-control">
+								            <label class="label-floated" for="floatingInput">Password</label>
+								            <label for="floatingInput" class="label-base text-success">feedback</label>
+								          </div>
+								        </form>
+								</div>
+							<div class="srcode mt-5">
+	         					<pre class="prer">
+	         						<button class="copybtn" id="bcopy14">copy</button>
+	         						<code class="copy14" style="font-size:12px;">
+&lt;form class="form-group"&gt;
+	&lt;div class="form-floated"&gt;
+		&lt;input type="email" class="form-control"&gt;
+		&lt;label class="label-floated" for="floatingInput"&gt;Email address&lt;/label&gt;
+		&lt;label for="floatingInput" class="label-base"&gt;Feedback&lt;/label&gt;
+	&lt;/div&gt;
+
+	&lt;div class="form-floated mt-5"&gt;
+		&lt;input type="email" class="form-control"&gt;
+		&lt;label class="label-floated" for="floatingInput"&gt;Password&lt;/label&gt;
+		&lt;label for="floatingInput" class="label-base text-success"&gt;feedback&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+	         						</code>
+	         					</pre>
+	         				</div>
+
+	         				</div>
+
+	         				<div class="container-fluid p-0 mb-5 maget" id="aniform">
+	         					<p class="h4 mb-3">Animated forms.</p>
+	         					<p class="mf-5 mb-4">These use classes that are consecutive and if they are not enough for your project, you can temper with the js file following our documetation. We use jquery to do this and so it is readable.</p>
+	         					<p class="mf-5 mb-5">Add classes form-label-1 and form-control-float-1 consectively 1-12 add if they are not enough follow the guide to add more.</p>
+								<div class="container mt-4">
+								        <form class="form-group">
+								          <div class="form-floated">
+								            <input type="email" class="form-control form-control-float-9">
+								            <label class="label-float form-label-9" for="floatingInput">Email address</label>
+								            <label for="floatingInput" class="label-base"></label>
+								          </div>
+
+								          <div class="form-floated-line mt-3">
+								            <input type="email" class="form-control form-control-float-10">
+								            <label class="label-float form-label-10 " for="floatingInput">Email address</label>
+								            <label for="floatingInput" class="label-base"></label>
+								          </div>
+								        </form>
+								</div>
+							<div class="srcode mt-5">
+	         					<pre class="prer">
+	         						<button class="copybtn" id="bcopy15">copy</button>
+	         						<code class="copy15" style="font-size:12px;">
+&lt;form class="form-group"&gt;
+	&lt;div class="form-floated"&gt;
+		&lt;input type="email" class="form-control form-control-float-9"&gt;
+		&lt;label class="label-float form-label-9" for="floatingInput"&gt;Email address&lt;/label&gt;
+		&lt;label for="floatingInput" class="label-base"&gt;&lt;/label&gt;
+	&lt;/div&gt;
+
+	&lt;div class="form-floated-line mt-3"&gt;
+		&lt;input type="email" class="form-control form-control-float-10"&gt;
+		&lt;label class="label-float form-label-10 " for="floatingInput"&gt;Email address&lt;/label&gt;
+		&lt;label for="floatingInput" class="label-base"&gt;&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+	         						</code>
+	         					</pre>
+	         				</div>
+	         				<p class="mf-4 mt-3 alert alert-info">change the label's color to any color you want please don't mind the blue color. You are a programmer boss.</p>
+
+	         				</div>
+
+
+	         				<div class="container-fluid p-0 mt-5 mb-5" id="llabel">
+	         					<h2>Label</h2>
+	         					<p class="mf-5">You can change these labels to any size you what. They are two on each input, I hope that is not a problem.<br>One to act as a placeholder and the other as feedback.</p>
+								<div class="container mt-4">
+								        <form class="form-group">
+								          <div class="form-floated">
+								            <input type="password" class="form-control">
+								            <label class="label-floated" for="floatingInput">Password</label>
+								            <label for="floatingInput" class="label-base text-success">correct password</label>
+								          </div>
+                                      </form>
+								</div>
+							<div class="srcode mt-5">
+	         					<pre class="prer">
+	         						<button class="copybtn" id="bcopy16">copy</button>
+	         						<code class="copy16" style="font-size:12px;">
+&lt;form class="form-group"&gt;
+	&lt;div class="form-floated"&gt;
+		&lt;input type="password" class="form-control"&gt;
+		&lt;label class="label-floated" for="floatingInput"&gt;Password&lt;/label&gt;
+		&lt;label for="floatingInput" class="label-base"&gt;correct password &lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+	         						</code>
+	         					</pre>
+	         				</div>
+
+	         				</div>
+
+	         				<div class="container-fluid p-0 mt-5 mb-5" id="sswitch">
+	         					<h2>Switches</h2>
+	         					<p class="mf-5">To change the color or the switch follow this link <span  data-bs-toggle="modal" data-bs-target="#staticBackdropLive" class="text-blue-500">documentation</span>.</p>
+								<div class="container d-flex justify-content-around mt-4">
+								      <input type="checkbox" class="form-checker" name="">
+								      <input type="checkbox" class="form-checker" name="">
+								      <input type="checkbox" class="form-checker" name="">
+								</div>
+							<div class="srcode mt-5">
+	         					<pre class="prer">
+	         						<button class="copybtn" id="bcopy17">copy</button>
+	         						<code class="copy17" style="font-size:12px;">
+&lt;input type="checkbox" class="form-checker" name=""&gt;
+&lt;input type="checkbox" class="form-checker" name=""&gt;
+&lt;input type="checkbox" class="form-checker" name=""&gt;
+	         						</code>
+	         					</pre>
+	         				</div>
+
+	         				</div>
+
+
+	         			</div>
+
+	         			<div class="container-fluid p-0 maget" id="hscr">
+	         				<h2>Horizontal scroll</h2>
+	         				<p class="mf-5 mb-5">This feature will be enabled with your css. Just add width that will be fit for the elements you have used. Follow the code or guide.<br>You can add words too and buttons, so thats not a full example</p>
+	         				<div class="container-fluid m-0">
+	         					<div class="row m-0 p-0 m-0 justify-content-between">
+		        						<div class="container-fluid p-0 m-0 h-scroll-container">
+											<div class="h-scroll" style="width:1200px;">
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+											</div>
+										</div>
+		        					</div>
+	         				</div>
+
+
+	         				<div class="srcode mt-5">
+	         					<pre class="prer">
+	         						<button class="copybtn" id="bcopy18">copy</button>
+	         						<code class="copy18" style="font-size:12px;">
+&lt;div class="row m-0 p-0 m-0 justify-content-between"&gt;
+	&lt;div class="container-fluid p-0 m-0 h-scroll-container"&gt;
+		&lt;div class="h-scroll" style="width:1200px;"&gt;
+			&lt;div class="m-2 round"&gt;&lt;img src="girl1.jpg" class="img-fluid"&gt;&lt;/div&gt;
+			&lt;div class="m-2 round"&gt;&lt;img src="girl1.jpg" class="img-fluid"&gt;&lt;/div&gt;
+			&lt;div class="m-2 round"&gt;&lt;img src="girl1.jpg" class="img-fluid"&gt;&lt;/div&gt;
+			&lt;div class="m-2 round"&gt;&lt;img src="girl1.jpg" class="img-fluid"&gt;&lt;/div&gt;
+			&lt;div class="m-2 round"&gt;&lt;img src="girl1.jpg" class="img-fluid"&gt;&lt;/div&gt;
+			&lt;div class="m-2 round"&gt;&lt;img src="girl1.jpg" class="img-fluid"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+	         						</code>
+	         					</pre>
+	         				</div>
+	         				<p class="mf-4 mt-3 alert alert-info">This feature is used in most apps I have seen, it would be good to put it in your app even if you don't find it need.<br>Appy width with css to trigger this.</p>
+
+	         			</div>
+
+	         			<div class="container-fluid p-0 maget" id="sshadow">
+	         				<h1>Shadow</h1>
+	         				<p>Bootstrap has its own shadow but I introduced the shadow-md class that will make an element fit to look raise from the screen , that will make it a material design.</p>
+
+	         				<div class="container-fluid">
+	         					<div class="container shadow-md" style="height:220px;"></div>
+	         				</div>
+		         				<div class="srcode mt-5">
+		         					<pre class="prer">
+		         						<button class="copybtn" id="bcopy19">copy</button>
+		         						<code class="copy19" style="font-size:12px;">
+&lt;div class="container shadow-md" style="height:220px;"&gt;&lt;/div&gt;
+		         						</code>
+		         					</pre>
+		         				</div>
+		         				<p class="mt-3 mf-4">And still you can use your own box-shadow CSS.</p>
+	         			</div>
+
+	         			<div class="container-fluid p-0 maget" id="cardd">
+	         				<h1>Cards</h1>
+	         				<p class="mf-5">I bring many cards to you, first material design are full of animations, shapes I don't understand text icons and images, and thats not all. Try to choose any card you want, customize it and I provided a full documentation for designing cards.</p>
+	         				<p>Still our animated cards use consecutive classes to and if you are to use many, follow <span class="text-blue-500"  data-bs-toggle="modal" data-bs-target="#staticBackdropLive" >documentation</span> or again temper with the js file.</p>
+
+	         				<div class="container-fluid mt-5 d-flex justify-content-around flex-wrap">
+	         					<div class="card shadow-md mycard">
+				        			<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+				        			<div class="card-btn-pos-right">
+				        				<button class="card-btn btn bg-success"><span><i class="fab fa-java fa-2x"></i></span></button>
+				        			</div>
+				        			<p class="card-header h4 bg-light">Card</p>
+				        			<div class="card-body">
+				        				<p>This is a card text with only bootstrap5.<br>No added css to make it material design, but wait after.</p>
+				        			</div>	
+				        			<div class="card-footer bg-light pb-0 d-flex justify-content-between">
+				        				<p class="card-text">sales</p>
+				        				<p class="card-text">Action2</p>
+				        				<div><span><i class="fas fa-shopping-cart"></i></span>&nbsp;&nbsp; <span><i class="fab fa-git"></i></span></div>
+				        			</div>
+				        		</div>
+
+				        		<div class="card shadow-md mycard">
+				        			<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+				        			<div class="card-btn-pos-center">
+				        				<button class="card-btn btn bg-success"><span><i class="fab fa-java fa-2x"></i></span></button>
+				        			</div>
+				        			<p class="card-header h4 bg-light">Card</p>
+				        			<div class="card-body">
+				        				<p>This is a card text with only bootstrap5.<br>No added css to make it material design, but wait after.</p>
+				        			</div>	
+				        			<div class="card-footer bg-light pb-0 d-flex justify-content-between">
+				        				<p class="card-text">sales</p>
+				        				<p class="card-text">Action2</p>
+				        				<div><span><i class="fas fa-shopping-cart"></i></span>&nbsp;&nbsp; <span><i class="fab fa-git"></i></span></div>
+				        			</div>
+				        		</div>
+
+				        		<div class="card shadow-md mycard">
+				        			<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+				        			<div class="card-btn-pos-left">
+				        				<button class="card-btn btn bg-success"><span><i class="fab fa-java fa-2x"></i></span></button>
+				        			</div>
+				        			<p class="card-header h4 bg-light">Card</p>
+				        			<div class="card-body">
+				        				<p>This is a card text with only bootstrap5.<br>No added css to make it material design, but wait after.</p>
+				        			</div>	
+				        			<div class="card-footer bg-light pb-0 d-flex justify-content-between">
+				        				<p class="card-text">sales</p>
+				        				<p class="card-text">Action2</p>
+				        				<div><span><i class="fas fa-shopping-cart"></i></span>&nbsp;&nbsp; <span><i class="fab fa-git"></i></span></div>
+				        			</div>
+				        		</div>
+
+	         				</div>
+
+		         				<div class="srcode mt-5">
+		         					<pre class="prer">
+		         						<button class="copybtn" id="bcopy20">copy</button>
+		         						<code class="copy20" style="font-size:12px;">
+&lt;div class="container-fluid mt-5 d-flex justify-content-around flex-wrap"&gt;
+	&lt;div class="card shadow-md mycard"&gt;
+		&lt;img src="girl1.jpg" class="img-fluid"&gt;
+		&lt;div class="card-btn-pos-right"&gt;
+			&lt;button class="card-btn btn bg-success"&gt;&lt;span&gt;&lt;i class="fab fa-java fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;p class="card-header h4 bg-light"&gt;Card&lt;/p&gt;
+		&lt;div class="card-body"&gt;
+			&lt;p&gt;This is a card text with only bootstrap5.&lt;br&gt;No added css to make it material design, but wait after.&lt;/p&gt;
+		&lt;/div&gt;	
+		&lt;div class="card-footer bg-light pb-0 d-flex justify-content-between"&gt;
+			&lt;p class="card-text"&gt;sales&lt;/p&gt;
+			&lt;p class="card-text"&gt;Action2&lt;/p&gt;
+			&lt;div&gt;&lt;span&gt;&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;&nbsp;&nbsp; &lt;span&gt;&lt;i class="fab fa-git"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class="card shadow-md mycard"&gt;
+		&lt;img src="girl1.jpg" class="img-fluid"&gt;
+		&lt;div class="card-btn-pos-center"&gt;
+			&lt;button class="card-btn btn bg-success"&gt;&lt;span&gt;&lt;i class="fab fa-java fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;p class="card-header h4 bg-light"&gt;Card&lt;/p&gt;
+		&lt;div class="card-body"&gt;
+			&lt;p&gt;This is a card text with only bootstrap5.&lt;br&gt;No added css to make it material design, but wait after.&lt;/p&gt;
+		&lt;/div&gt;	
+		&lt;div class="card-footer bg-light pb-0 d-flex justify-content-between"&gt;
+			&lt;p class="card-text"&gt;sales&lt;/p&gt;
+			&lt;p class="card-text"&gt;Action2&lt;/p&gt;
+			&lt;div&gt;&lt;span&gt;&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;&nbsp;&nbsp; &lt;span&gt;&lt;i class="fab fa-git"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class="card shadow-md mycard"&gt;
+		&lt;img src="girl1.jpg" class="img-fluid"&gt;
+		&lt;div class="card-btn-pos-left"&gt;
+			&lt;button class="card-btn btn bg-success"&gt;&lt;span&gt;&lt;i class="fab fa-java fa-2x"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;p class="card-header h4 bg-light"&gt;Card&lt;/p&gt;
+		&lt;div class="card-body"&gt;
+			&lt;p&gt;This is a card text with only bootstrap5.&lt;br&gt;No added css to make it material design, but wait after.&lt;/p&gt;
+		&lt;/div&gt;	
+		&lt;div class="card-footer bg-light pb-0 d-flex justify-content-between"&gt;
+			&lt;p class="card-text"&gt;sales&lt;/p&gt;
+			&lt;p class="card-text"&gt;Action2&lt;/p&gt;
+			&lt;div&gt;&lt;span&gt;&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;&nbsp;&nbsp; &lt;span&gt;&lt;i class="fab fa-git"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+		         						</code>
+		         					</pre>
+		         				</div>
+		         				<p class="mt-3 mf-4">I just added a floating button on the card. You may not know when to include the card but look in the templates and you will find out.</p>
+
+		         				<h2 class="mt-5 mb-3" id="animcard">Animated cards</h2>
+		         				<p class="mf-5">Animated cards use consecutive classes too, easy to modify follow <a href="#">documentation</a>.</p>
+
+		         				<div class="container-fluid d-flex justify-content-between flex-wrap mt-5">
+		         					<div class="card-fold shadow-md mycard">
+					        			<img src="{% static "images/girl1.jpg" %}" class="card-img img-fold-up-7">
+					        			<div class="card-content content-fold-up-7"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+					        			<div class="card-control">
+					        				<div><p class="card-text">click thumb</p></div>
+					        				<div class="fold-up-7"><span><i class="fas fa-thumbs-up"></i></span></div>
+					        			</div>
+				        			</div>
+				        			<div class="card-fold shadow-md mycard">
+					        			<img src="{% static "images/girl1.jpg" %}" class="card-img img-fold-up-8">
+					        			<div class="card-content content-fold-up-8"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+					        			<div class="card-control">
+					        				<div><p class="card-text">click thumb</p></div>
+					        				<div class="fold-up-8"><span><i class="fas fa-thumbs-up"></i></span></div>
+					        			</div>
+				        			</div>
+				        			<div class="card-fold shadow-md mycard">
+					        			<img src="{% static "images/girl1.jpg" %}" class="card-img img-fold-up-9">
+					        			<div class="card-content content-fold-up-9"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+					        			<div class="card-control">
+					        				<div><p class="card-text">click thumb</p></div>
+					        				<div class="fold-up-9"><span><i class="fas fa-thumbs-up"></i></span></div>
+					        			</div>
+				        			</div>
+		         				</div>
+
+		         				<div class="srcode mt-5">
+		         					<pre class="prer">
+		         						<button class="copybtn" id="bcopy21">copy</button>
+		         						<code class="copy21" style="font-size:12px;">
+&lt;div class="container-fluid d-flex justify-content-between flex-wrap mt-5"&gt;
+	&lt;div class="card-fold shadow-md mycard"&gt;
+		&lt;img src="girl1.jpg" class="card-img img-fold-up-7"&gt;
+		&lt;div class="card-content content-fold-up-7"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;&lt;/div&gt;
+		&lt;div class="card-control"&gt;
+			&lt;div&gt;&lt;p class="card-text"&gt;click thumb&lt;/p&gt;&lt;/div&gt;
+			&lt;div class="fold-up-7"&gt;&lt;span&gt;&lt;i class="fas fa-thumbs-up"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class="card-fold shadow-md mycard"&gt;
+		&lt;img src="girl1.jpg" class="card-img img-fold-up-8"&gt;
+		&lt;div class="card-content content-fold-up-8"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;&lt;/div&gt;
+		&lt;div class="card-control"&gt;
+			&lt;div&gt;&lt;p class="card-text"&gt;click thumb&lt;/p&gt;&lt;/div&gt;
+			&lt;div class="fold-up-8"&gt;&lt;span&gt;&lt;i class="fas fa-thumbs-up"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class="card-fold shadow-md mycard"&gt;
+		&lt;img src="girl1.jpg" class="card-img img-fold-up-9"&gt;
+		&lt;div class="card-content content-fold-up-9"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;&lt;/div&gt;
+		&lt;div class="card-control"&gt;
+			&lt;div&gt;&lt;p class="card-text"&gt;click thumb&lt;/p&gt;&lt;/div&gt;
+			&lt;div class="fold-up-9"&gt;&lt;span&gt;&lt;i class="fas fa-thumbs-up"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+		         						</code>
+		         					</pre>
+		         				</div>
+		         				<p class="mf-4 mt-3 alert alert-info">I changed the width of the cards to fit what i wanted and I hope you do so. It is the <b>mycard</b> class so it is not part of the classes.</p>
+
+
+		         				<h2 class="mt-5 mb-3" id="procca">Profile cards</h2>
+		         				<p class="mf-5">This are mostly used to describe something or somwonw like the profile part of facabook. Follow the <span class="text-blue-500"  data-bs-toggle="modal" data-bs-target="#staticBackdropLive" >documentation</span> and thebtemplayes tab to know how to use them.</p>
+
+		         				<div class="container-fluid d-flex justify-content-between flex-wrap mt-5">
+		         					<div class="card shadow-md mycard mt-5">
+					        			<div class="card-img-out"><img src="{% static "images/girl1.jpg" %}" class="img-fluid"></div>
+					        			
+					        			<div class="card-body">
+					        				<p class="m-0 p-0 text-center"><span class="h5">Nancy K.</span><br><span class="font-sm">Our form secretary<br>But now the new ui designer</span></p>
+					        			</div>
+					        			<div class="d-flex justify-content-center mt-3 mb-3">
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        			</div>
+					        		</div>
+
+				        			<div class="card shadow-md mycard mt-5">
+					        			<div class="card-img-out-circle"><img src="{% static "images/girl1.jpg" %}" class="img-fluid"></div>
+					        			
+					        			<div class="card-body">
+					        				<p class="m-0 p-0 text-center"><span class="h5">Nancy K.</span><br><span class="font-sm">Our form secretary<br>But now the new ui designer</span></p>
+					        			</div>
+					        			<div class="d-flex justify-content-center mt-3 mb-3">
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        			</div>
+					        		</div>
+		         				</div>
+
+		         				<div class="srcode mt-5">
+		         					<pre class="prer">
+		         						<button class="copybtn" id="bcopy22">copy</button>
+		         						<code class="copy22" style="font-size:12px;">
+&lt;div class="card shadow-md mycard mt-5"&gt;
+	&lt;div class="card-img-out"&gt;&lt;img src="girl1.jpg" class="img-fluid"&gt;&lt;/div&gt;				        			
+	&lt;div class="card-body"&gt;
+		&lt;p class="m-0 p-0 text-center"&gt;&lt;span class="h5"&gt;Nancy K.&lt;/span&gt;&lt;br&gt;&lt;span class="font-sm"&gt;Our form secretary&lt;br&gt;But now the new ui designer&lt;/span&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class="d-flex justify-content-center mt-3 mb-3"&gt;
+		&lt;div class="m-3 mt-1 mb-1"&gt;&lt;span&gt;&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;div class="m-3 mt-1 mb-1"&gt;&lt;span&gt;&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;div class="m-3 mt-1 mb-1"&gt;&lt;span&gt;&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="card shadow-md mycard mt-5"&gt;
+	&lt;div class="card-img-out-circle"&gt;&lt;img src="girl1.jpg" class="img-fluid"&gt;&lt;/div&gt;					        			
+	&lt;div class="card-body"&gt;
+		&lt;p class="m-0 p-0 text-center"&gt;&lt;span class="h5"&gt;Nancy K.&lt;/span&gt;&lt;br&gt;&lt;span class="font-sm"&gt;Our form secretary&lt;br&gt;But now the new ui designer&lt;/span&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class="d-flex justify-content-center mt-3 mb-3"&gt;
+		&lt;div class="m-3 mt-1 mb-1"&gt;&lt;span&gt;&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;div class="m-3 mt-1 mb-1"&gt;&lt;span&gt;&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+		&lt;div class="m-3 mt-1 mb-1"&gt;&lt;span&gt;&lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+		         						</code>
+		         					</pre>
+		         				</div>
+		         				<p class="mf-4 mt-3 alert alert-info">I changed the width of the cards too to fit what i wanted and I hope you do so. It is the <b>mycard</b> class so it is not part of the classes for the kit or even bootstrap.</p>
+	         			</div>
+
+
+	         			<div class="container-fluid p-0 maget" id="filtr">
+	         				<h1>File Tree</h1>
+	         				<p class="mf-5">You can call this an accordion but it will resize only have toggling the given classes. It is best for while making a parent with children like folder and its files and sub folders. Making a text-editor.</p>
+	         				<p class="mf-5">I will make a non-seen tutorial of making a text-editor with javascript simple and small amounted (CSS & HTML) with the help of bootstrap and appy kit so we just mind the javascript functionality.</p>
+
+	         				<div class="container-fluid p-0">
+	         					<p class="mf-4">Click all those with <i class="fas fa-arrow-right"></i> icon to see the effect. And it also uses consecutive classes, please follow <span class="text-blue-500"  data-bs-toggle="modal" data-bs-target="#staticBackdropLive" >documentation</span> it will help very much. </p>
+	         					<div class="mtree">
+	         						<div class="container">
+										<p class="accordion-1"><i class="fas fa-arrow-right"></i> Bootstrap</p>
+										<ul class="accordion-body-1">
+											<li><i class="fab fa-apple"></i> apple</li>
+											<li><span class="accordion-2"><i class="fas fa-arrow-right"></i> js</span>
+												<ul class="accordion-body-2">
+													<li><i class="fab fa-angular"></i> angular.js</li>
+													<li><i class="fab fa-python"></i> &nbsp;main.py</li>
+													<li><i class="fab fa-java"></i> &nbsp; jar.jvm</li>
+													<li>C++</li>
+												</ul>
+											</li>
+											<li><i class="fab fa-accessible-icon"></i> src</li>
+											<li><span class="accordion-3"><i class="fas fa-arrow-right"></i> json</span>
+												<ul class="accordion-body-3">
+													<li><i class="fab fa-angular"></i> angular.js</li>
+													<li><i class="fab fa-python"></i> &nbsp;main.py</li>
+													<li><i class="fab fa-java"></i> &nbsp; jav.jar</li>
+													<li>C++</li>
+												</ul></li>
+										</ul>
+									</div>
+	         					</div>
+		         				<div class="srcode mt-5">
+		         					<pre class="prer">
+		         						<button class="copybtn" id="bcopy23">copy</button>
+		         						<code class="copy23" style="font-size:12px;">
+&lt;div class="container"&gt;
+	&lt;p class="accordion-1"&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt; Bootstrap&lt;/p&gt;
+	&lt;ul class="accordion-body-1"&gt;
+		&lt;li&gt;&lt;i class="fab fa-apple"&gt;&lt;/i&gt; apple&lt;/li&gt;
+		&lt;li&gt;&lt;span class="accordion-2"&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt; js&lt;/span&gt;
+			&lt;ul class="accordion-body-2"&gt;
+				&lt;li&gt;&lt;i class="fab fa-angular"&gt;&lt;/i&gt; angular.js&lt;/li&gt;
+				&lt;li&gt;&lt;i class="fab fa-python"&gt;&lt;/i&gt; &nbsp;main.js&lt;/li&gt;
+				&lt;li&gt;&lt;i class="fab fa-java"&gt;&lt;/i&gt; &nbsp; file.jvm&lt;/li&gt;
+				&lt;li&gt;C++&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;i class="fab fa-accessible-icon"&gt;&lt;/i&gt; src&lt;/li&gt;
+		&lt;li&gt;&lt;span class="accordion-3"&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt; json&lt;/span&gt;
+			&lt;ul class="accordion-body-3"&gt;
+				&lt;li&gt;&lt;i class="fab fa-angular"&gt;&lt;/i&gt; angular&lt;/li&gt;
+				&lt;li&gt;&lt;i class="fab fa-python"&gt;&lt;/i&gt; &nbsp;python&lt;/li&gt;
+				&lt;li&gt;&lt;i class="fab fa-java"&gt;&lt;/i&gt; &nbsp; java&lt;/li&gt;
+				&lt;li&gt;C++&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+		         						</code>
+		         					</pre>
+		         				</div>
+		         				<p class="alert mt-3 alert-info">You can customize to the way you want and please do so my Developer Friend.</p>
+
+	         				</div>
+
+
+
+	         			</div>
+
+
+	         			<div class="container-fluid p-0" style="margin-top:100px;">
+	         				<p class="mf-4">To keep updated on the new versions signin or follow the links bellow.</p>
+	         				<div class="container-fluid p-0 m-0">
+	         					<div class="row m-0 p-0 m-0 p-0">
+	         						<div class="col-md-6 p-0 m-0">
+	         							<div class="container-fluid p-0 m-0">
+			         						<form class="form-group input-group" method="Post">
+                                                {% csrf_token %}
+			         							{{fort.Emails}}
+			         							<button type="submit" class="btn bg-teal-700 text-light"><i class="fas fa-envelope"></i> submit</button>
+			         						</form>
+			         					</div>
+			         					<p class="mf-3 mt-3">Remember you will receive notification for not only our package releases but also templates or themes.</p>
+	         						</div>
+	         					</div>
+	         				</div>
+	         				<div class="container mt-5 mb-5">
+							    	<p class="text-center h5">Contact me.</p>
+							    	<div class="container text-center mt-3">
+							    		<button class="btn-round btn-round-sm btn-primary"><i class="fab fa-twitter"></i></button>
+				        				<button class="btn-round btn-round-sm btn-danger"><i class="fab fa-pinterest-p"></i></button>
+				        				<button class="btn-round btn-round-sm btn-primary"><i class="fab fa-facebook-f"></i></button>
+				        				<button class="btn-round btn-round-sm btn-success"><i class="fab fa-whatsapp"></i></button>
+				        				<button class="btn-round btn-round-sm btn-dark"><i class="fab fa-github"></i></button>
+				        				<button class="btn-round btn-round-sm btn-link"><i class="fas fa-globe"></i></button>
+				        			</div>
+				        			<p class="mt-3"><a href="#">moreinfo</a></p>
+							    </div>
+	         			</div>
+
+	         		</div>
+
+	         		<div class="col-xl-2 col-lg-3 col-md-3 col-sm-9 mapoma sirer" style="z-index:1000;">
+	         			<div class="container-fluid p-0 sirer">
+	         				<p class="text-dark alert-purpl"><b>Design</b> you App with Appy.<br>Get our kit for <b>free</b></p>
+	         				<a href="{% static "appyhtml.zip" %}" download><button class="btn bg-pink-600 text-light">download kit <i class="fas fa-download"></i></button></a>
+
+							<div class="bg-dar">
+								<div class="new-toast-middle" id="toast-1">
+									<div class="new-toast-header">
+										<p>AppyHTML notification</p>
+										<span class="new-toast-closer" id="toast-close-1"><i class="fas fa-times text-secondary"></i></span>
+									</div>
+									<div class="new-toast-body">
+										<p class="new-toast-text">No searchbar in this website but it is coming in the next update.</p>
+									</div>
+								</div>
+							</div>
+							
+							<p class="mf-5 mt-4 text-purple-700">You can visit my projects on github.</p>
+							<button class="btn-round btn-round-sm btn-dark"><i class="fab fa-github"></i></button>
+							<hr>
+							<p class="mf-5 mt-4">Learn appymd from media.</p>
+							<button class="btn-round btn-round-sm btn-primary"><i class="fab fa-twitter"></i></button>
+				        	<button class="btn-round btn-round-sm btn-danger"><i class="fab fa-pinterest-p"></i></button>
+				        	<button class="btn-round btn-round-sm btn-primary"><i class="fab fa-facebook-f"></i></button>
+				        	<button class="btn-round btn-round-sm btn-success"><i class="fab fa-whatsapp"></i></button>
+				        	<hr>
+
+				        	<p class="mf-3"><b>Sorry</b> many features are missing but the website is still very young hope you have seen the age. Everyday it is <b>updated</b> so revisit the website.</p>
+				        	<div class="d-flex mt-4 justify-content-center align-items-center">
+				        		<h2>1 day</h2>
+				        	</div>
+
+	         			</div>	
+	         		</div>
+
+
+
+	         	</div>
+	        </div>
+	    </div>
+
+
+
+	    <!-- page3 -->
+	    <div class="tab-pane fade" id="nav-Templates" role="tabpanel" aria-labelledby="nav-contact-tab">
+	    	<div class="container-fluid m-0 kaly">
+				<div class="row m-0 p-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+		        	<div class="col">
+		        		<div class="phone shadow-md bg-grey mb-5">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center bg-iron">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0">Back</p>
+		        			</div>
+
+		        			<div class="interface">
+		        				<div class="container-fluid">
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="col-6 bg-light d-flex justify-content-center align-items-center shadow-md mt-2 appm"><button class="btn bg-dark text-light btn-round"><i class="fab fa-github"></i></button></div>
+		        						<div class="col-6 bg-light d-flex justify-content-center align-items-center shadow-md mt-2 appm"><button class="btn bg-dark text-light btn-round"><i class="fab fa-github"></i></button></div>
+		        					</div>
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="col-6 bg-light d-flex justify-content-center align-items-center shadow-md mt-2 appm"><button class="btn bg-dark text-light btn-round"><i class="fab fa-github"></i></button></div>
+		        						<div class="col-6 bg-light d-flex justify-content-center align-items-center shadow-md mt-2 appm"><button class="btn bg-dark text-light btn-round"><i class="fab fa-github"></i></button></div>
+		        					</div>
+		        					<div class="row m-0 p-0 mb-2 justify-content-between">
+		        						<div class="col-6 bg-light d-flex justify-content-center align-items-center shadow-md mt-2 appm"><button class="btn bg-dark text-light btn-round"><i class="fab fa-github"></i></button></div>
+		        						<div class="col-6 bg-light d-flex justify-content-center align-items-center shadow-md mt-2 appm"><button class="btn bg-dark text-light btn-round"><i class="fab fa-github"></i></button></div>
+		        					</div>
+		        				</div>
+		        			</div>
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center bg-iron">
+		        				<span><i class="fas fa-home"></i></span>
+		        				<span><i class="fas fa-download"></i></span>
+		        				<span><i class="fas fa-cog"></i></span>
+		        			</div>
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md bg-grey mb-5" style="position:relative;">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center bg-iron">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0">Back</p>
+		        			</div>
+
+		        			<div class="navdr shadow-md bg-dark">
+		        				<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        				<ul class="list-nav">
+		        					<li><i class="fas fa-home"></i> Home</li>
+		        					<li><i class="fas fa-bell"></i> Trending</li>
+		        					<li><i class="fas fa-fire"></i> News</li>
+		        					<li><i class="fas fa-recycle"></i> Recyle bin</li>
+		        					<li><i class="fas fa-cog"></i> Settings</li>
+		        				</ul>
+		        				<hr>
+		        				<ul class="list-nav">
+		        					<li><i class="fas fa-globe"></i> Connect<br>Internet</li>
+		        				</ul>
+		        			</div>
+		        			
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md p-0 m-0 bg-grey mb-5">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center bg-teal-700">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0">Back</p>
+		        			</div>
+
+		        			<div class="interface bg-grey p-0 m-0">
+		        				<div class="container-fluid p-0 m-0 faceb">
+		        					<div class="proc shadow-md"></div>
+		        				</div>
+		        				<div class="container-fluid mt-3 p-0 m-0">
+		        					<div class="new-list pt-2 shadow bg-white">
+		        						<p class="m-0" style="font-size:13px; padding-left:12px;">ABOUT ME</p>
+		        						<ul>
+		        							<li><button class="btn btn-puppy btn-round"><i class="fas fa-user"></i></button> &nbsp;Rogers K</li>
+		        							<li><button class="btn bg-blue-400 text-light btn-round"><i class="fas fa-envelope"></i></button> &nbsp;appymd256@gmail.com</li>
+		        							<li><button class="btn btn-success btn-round"><i class="fas fa-phone"></i></button> &nbsp;+256 9346 7484</li>
+		        						</ul>
+		        					</div>
+		        					<div class="new-list pt-2 shadow bg-white">
+		        						<p class="m-0" style="font-size:13px; padding-left:12px;">CODING</p>
+		        						<ul>
+		        							<li><button class="btn btn-dark btn-round"><i class="fab fa-github"></i></button> &nbsp;Rogers K</li>
+		        							<li><button class="btn btn-blue btn-round"><i class="fab fa-twitter"></i></button> &nbsp;Rogers K</li>
+		        						</ul>
+		        					</div>
+		        				</div>
+		        			</div>
+
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone bg-white shadow-md mb-5">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 align-items-center bg-white text-dark">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0">Back</p>
+		        			</div>
+
+		        			<div class="interface">
+		        				<div class="prota flex-column">
+		        					<p class="text-center h4 mt-4">Signin</p><br>
+		        					<div class="proc-si"></div>
+		        				</div>
+
+		        				<div class="container mt-5">
+		        					<form class="form-group">
+							          	<div class="form-floated-line mt-4">
+							            	<input type="text" class="form-control form-control-float-7" style="border-color:#0d6efd; border-size:2px;">
+							            	<label class="label-float form-label-7" for="floatingInput">Username</label>
+							            	<label for="floatingInput" class="label-base text-danger"></label>
+							          	</div>
+							          	<div class="form-floated-line mt-4">
+							            	<input type="email" class="form-control form-control-float-8" style="border-color:#0d6efd; border-size:2px;">
+							            	<label class="label-float form-label-8" for="floatingInput">Email</label>
+							            	<label for="floatingInput" class="label-base text-danger"></label>
+							          	</div>
+							          	<div class="form-floated-line mt-4">
+							            	<input type="Password" class="form-control form-control-float-9" style="border-color:#0d6efd; border-size:2px;">
+							            	<label class="label-float form-label-9" for="floatingInput">Password</label>
+							            	<label for="floatingInput" class="label-base text-danger"></label>
+							          	</div>
+							          	<div class="d-flex justify-content-center">
+							          		<button class="btn btn-primary">submit</button>
+							          	</div>
+							        </form>
+		        				</div>
+		        			</div>
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone bg-grey shadow-md mb-5">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center bg-primary">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0">Back</p>
+		        			</div>
+
+		        			<div class="interface">
+		        				<div class="container-fluid">
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="col-12 bg-white d-flex justify-content-center align-items-center shadow-md mt-2 appm"><button class="btn btn-primary btn-round"><i class="fab fa-github"></i></button></div>
+		        					</div>
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="col-6 bg-white d-flex justify-content-center align-items-center shadow-md mt-2 appm"><button class="btn btn-primary btn-round"><i class="fab fa-github"></i></button></div>
+		        						<div class="col-6 bg-white d-flex justify-content-center align-items-center shadow-md mt-2 appm"><button class="btn btn-primary btn-round"><i class="fab fa-github"></i></button></div>
+		        					</div>
+		        					<div class="row m-0 p-0 mb-2 justify-content-between">
+		        						<div class="col-12 bg-white d-flex justify-content-center align-items-center shadow-md mt-2 appm"><button class="btn btn-primary btn-round"><i class="fab fa-github"></i></button></div>
+		        					</div>
+		        				</div>
+		        			</div>
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center bg-primary">
+		        				<span><i class="fas fa-home"></i></span>
+		        				<span><i class="fas fa-download"></i></span>
+		        				<span><i class="fas fa-cog"></i></span>
+		        			</div>
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone bg-grey shadow-md mb-5">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center bg-iron">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0">Back</p>
+		        			</div>
+
+		        			<div class="interface">
+		        				<div class="container-fluid">
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="container-fluid p-0 m-0 h-scroll-container">
+											<div class="h-scroll" style="width:1200px;">
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+											</div>
+										</div>
+		        					</div>
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="container-fluid p-0 m-0 h-scroll-container">
+											<div class="h-scroll" style="width:1500px;">
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+											</div>
+										</div>
+		        					</div>
+		        					
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="container-fluid p-0 m-0 h-scroll-container">
+											<div class="h-scroll" style="width:1200px;">
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+											</div>
+										</div>
+		        					</div>
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="container-fluid p-0 m-0 h-scroll-container">
+											<div class="h-scroll" style="width:1200px;">
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+												<div class="m-2 round">
+													<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+												</div>
+											</div>
+										</div>
+		        					</div>
+		        				</div>
+		        			</div>
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone bg-white shadow-md mb-5 catyy">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 align-items-center bg-transparent">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0"></p>
+		        			</div>
+
+		        			<div class="interface d-flex justify-content-center align-items-center" style="height:600px;">
+		        				<div class="spinner-grow text-light" role="status">
+						          	<span class="visually-hidden">Loading...</span>
+						        </div>
+		        			</div>
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md bg-white mb-5">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center bg-dark">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0">Back</p>
+		        			</div>
+
+		        			<div class="interface">
+		        				<div class="container-fluid">
+		        					<div class="row m-0 p-0 mt-2">
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/girl1.jpg" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">Rogers k</p>
+		        								<p class="m-0 p-0 whats">Uploaded new profile</p>
+		        								<p class="m-0 p-0 whats whatsa">23:04 P.M Thur.</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/girl1.jpg" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">Clare</p>
+		        								<p class="m-0 p-0 whats">Uploaded new profile</p>
+		        								<p class="m-0 p-0 whats whatsa">18:09 P.M Sat.</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/girl1.jpg" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">Ally</p>
+		        								<p class="m-0 p-0 whats">Uploaded new profile</p>
+		        								<p class="m-0 p-0 whats whatsa">13:48 P.M Fri.</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/girl1.jpg" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">Pauline</p>
+		        								<p class="m-0 p-0 whats">Uploaded new profile</p>
+		        								<p class="m-0 p-0 whats whatsa">02:04 P.M Thur.</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/girl1.jpg" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">Mark</p>
+		        								<p class="m-0 p-0 whats">Uploaded new profile</p>
+		        								<p class="m-0 p-0 whats whatsa">04:04 P.M Wed.</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/girl1.jpg" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">Alvin</p>
+		        								<p class="m-0 p-0 whats">Uploaded new profile</p>
+		        								<p class="m-0 p-0 whats whatsa">00:31 P.M Mon.</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/girl1.jpg" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">Jessica</p>
+		        								<p class="m-0 p-0 whats">Uploaded new profile</p>
+		        								<p class="m-0 p-0 whats whatsa">13:04 P.M Sun.</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/girl1.jpg" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">Kevin</p>
+		        								<p class="m-0 p-0 whats">Uploaded new profile</p>
+		        								<p class="m-0 p-0 whats whatsa">13:04 P.M Sun.</p>
+		        							</p>
+		        						</div>
+
+		        					</div>
+		        				</div>
+		        			</div>
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone bg-white shadow mb-5">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center bg-iron">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0">Back</p>
+		        			</div>
+
+		        			<div class="interface">
+		        				<div class="container-fluid p-0 m-0 p-1">
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="col-12 bg-white align-items-center shadow-md mt-2 appm">
+		        							<h4 class="mt-3">About</h4>
+		        							<p class="m-0 p-0 mt-3 simp-f"><i class="fas fa-tag"></i> &nbsp;&nbsp;&nbsp;This just for show now</p>
+		        							<p class="m-0 p-0 mt-2 simp-f"><i class="fas fa-phone"></i> &nbsp;&nbsp;&nbsp;+256 9263 2737</p>
+		        							<p class="m-0 p-0 mt-2 simp-f"><i class="fas fa-fire"></i> &nbsp;&nbsp;&nbsp;No danger detected</p>
+		        						</div>
+		        					</div>
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="col-12 bg-white align-items-center shadow-md mt-2 appm">
+		        							<h4 class="mt-3">Gallery</h4>
+		        							<p class="m-0 p-0 mt-3 simp-f"><i class="fas fa-image"></i> &nbsp;&nbsp;&nbsp;100 images found</p>
+		        							<p class="m-0 p-0 mt-2 simp-f"><i class="fas fa-phone"></i> &nbsp;&nbsp;&nbsp;20 videos found</p>
+		        							<p class="m-0 p-0 mt-2 simp-f"><i class="fas fa-fire"></i> &nbsp;&nbsp;&nbsp;No gif found</p>
+		        						</div>
+		        					</div>
+		        					<div class="row m-0 p-0 justify-content-between">
+		        						<div class="col-12 bg-white align-items-center shadow-md mt-2 appmf">
+		        							<h4 class="mt-3">Description</h4>
+		        							<p class="m-0 p-0 simp-f">Description, from appymd sowftware, We cater for both web and software development and now you can get our Editor But can be compatible with the app development.</p>
+		        						</div>
+		        					</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md bg-white mb-5">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 align-items-center bg-white">
+		        				<span><i class="fas fa-bars text-dark"></i></span>
+		        				<p class="m-0 p-0"></p>
+		        			</div><hr class="m-0">
+
+		        			<div class="interface">
+		        				<div class="container-fluid">
+		        					<p class="heading-txt text-dark mt-3">Settings</p>
+		        					<p>Display</p>
+		        					<div class="d-flex justify-content-around">
+		        						<p class="m-0 p-0 contr">Dark theme</p>
+		        						<input type="Checkbox" class="form-checker" name="">
+		        					</div>
+		        					<div class="d-flex mt-3 justify-content-around">
+		        						<p class="m-0 p-0 contr">Eye care<br><span class="smsm">Will turn on automatically</span></p>
+		        						<span><i class="fas fa-sun"></i></span>
+		        					</div>
+		        					<div class="d-flex mt-3 justify-content-around">
+		        						<input type="range" class="form-control-range" name="">
+		        						<span><i class="fas fa-sun"></i></span>
+		        					</div>
+		        					<hr>
+		        					<p class="heading-txt text-dark">System</p>
+		        					<div class="d-flex mt-3 justify-content-around">
+		        						<p class="m-0 p-0 contr">Mute Volume</p>
+		        						<span><i class="fas fa-microphone"></i></span>
+		        					</div>
+		        					<div class="d-flex mt-3 justify-content-around">
+		        						<p class="m-0 p-0 contr">Screen Rotation</p>
+		        						<span><i class="fas fa-angle-double-right"></i></span>
+		        					</div>
+		        				</div>
+		        			</div>
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md bg-white mb-5">
+		        			
+		        			
+
+		        			<div class="interface">
+		        				<div class="shadow container-fluid p-0 m-0">
+		        					<img src="{% static "images/home.jpg" %}" class="img-fluid">
+		        				</div>
+		        				<div class="p-2">
+		        					<div class="mb-2 mt-3 d-flex justify-content-around text-md text-center">
+		        						<span><i class="fas fa-archive"></i><br><span style="font-size:11px;">Archive</span></span>
+		        						<span><i class="fas fa-recycle"></i><br><span style="font-size:11px;">Recycle</span></span>
+		        						<span><i class="fas fa-trash"></i><br><span style="font-size:11px;">Delete</span></span>
+		        						<span><i class="fas fa-upload"></i><br><span style="font-size:11px;">Use as</span></span>
+		        					</div>
+		        					<p class="m-0 mt-3" style="font-size:15px;">Uploaded or shot on 01:45 p.m Sat .</p>
+		        					<p class="m-0 mt-2" style="font-size:14px; color:#121212;">Add description</p>
+		        					<p class="text-secondary mt-4" style="font-size:11px;">DETAILS</p>
+		        					<div class="row m-0 p-0 mt-4" style="font-size:13px;">
+		        						<div class="col-3"><span><i class="fas fa-image"></i></span></div>
+		        						<div class="col-7">
+		        							<p>/storage/emulated/0/<br>PhoneMaster/Images/Download/<br>Mobile-ui-inspiration-0.7.jpg<br><span>0.4MP &nbsp;&nbsp; 850 x 510 &nbsp;&nbsp; 55k</span></p>
+		        						</div>
+		        					</div>
+
+		        				</div>
+		        				<button class="btn btn-light btn-round" style="position:absolute; top:2px; left:2px; font-size:14px; font-weight:thin;"><i class="fas fa-arrow-left"></i></button>
+		        			</div>
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md splashy2 mb-5">
+		        			<p class="text-light text-center">
+		        				<button class="btn-none text-blue" style="font-size:17px;"><i class="fab fa-facebook-f fa-2x" style="font-size:20px;"></i></button>
+		        				<br><span class="text-blue mt-3">Lite</span>
+		        			</p>
+		        			<div class="spinner-border text-blue mysp" role="status">
+					          	<span class="visually-hidden">Loading...</span>
+					        </div>
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md bg-white mb-5">
+		        			
+		        			<div class="md-bar text-dark d-flex justify-content-between px-3 shadow-md align-items-center bg-white">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0">Back</p>
+		        			</div>
+
+		        			<div class="interface">
+		        				<div class="container-fluid">
+		        					<div class="row m-0 p-0 mt-2">
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url(' {% static "images/google1.png" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 hhname">Hi Account</p>
+		        								<p class="m-0 p-0 whats">Phone keeper</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-11 mb-2">
+		        							<span class="text-blue" style="font-size:10px;">Accounts for owner</span>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/google1.png" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 hhname">com.opera.mini.native</p>
+		        								<p class="m-0 p-0 whats">gOpera mini</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/google1.png" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 hhname">com.opera.mini.newslite</p>
+		        								<p class="m-0 p-0 whats">Opera News Lite</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/google1.png" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 hhname">Phoenix.com</p>
+		        								<p class="m-0 p-0 whats">Phoenix</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/google1.png" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 hhname">appymd256@gmail.com</p>
+		        								<p class="m-0 p-0 whats">google</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/google1.png" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">WhatsApp</p>
+		        								<p class="m-0 p-0 whats">Whatsapp</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/google1.png" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">HIOS</p>
+		        								<p class="m-0 p-0 whats">Hios.account</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							<div class="profile-md" style="background-image: url('{% static "images/google1.png" %}');">
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10 d-flex align-items-center">
+		        							<p class="m-0 p-0 ">
+		        								<p class="m-0 p-0 whname">Add Account</p>
+		        							</p>
+		        						</div>
+		        						<div class="col-2 d-flex align-items-center p-0 m-0">
+		        							
+		        								<p>.</p>
+		        							</div>
+		        						</div>
+		        						<div class="col-10 d-flex align-items-center">
+		        							<hr>
+		        						</div>
+
+		        					</div>
+		        				</div>
+		        				<button class="btn btn-light btn-round" style="position:absolute; bottom:40px; right:20px; font-size:14px; font-weight:thin;"><span style="font-size:18px;">+</span></button>
+		        			</div>
+		        			
+		        		</div>
+		 	       			 	       	<div class="col">
+		        		<div class="phone shadow-md bg-light mb-5">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center bg-primary">
+		        				<span><i class="fas fa-bars"></i></span>
+		        				<p class="m-0 p-0">Back</p>
+		        			</div>
+
+		        			<div class="interface p-2 m-0" style="width:300px; height:700px;">
+		        				<div class="row m-0 p-0 grid" data-masonry='{ "columnWidth":200, "itemSelector": ".grid-item" }'>
+		        					<div class="col-6 grid-item">
+		        						<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        					</div>
+		        					<div class="col-6 grid-item">
+		        						<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        					</div>
+		        					<div class="col-6 grid-item">
+		        						<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        					</div>
+		        					<div class="col-6 grid-item">
+		        						<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        					</div>
+		        					<div class="col-6 grid-item">
+		        						<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        					</div>
+		        					<div class="col-6 grid-item">
+		        						<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        					</div>
+		        					<div class="col-6 grid-item">
+		        						<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        					</div>
+		        					<div class="col-6 grid-item">
+		        						<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        					</div>
+		        					<div class="col-6 grid-item">
+		        						<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        					</div>
+		        					<div class="col-6 grid-item">
+		        						<img src="{% static "images/girl1.jpg" %}" class="img-fluid">
+		        					</div>
+		        				</div>
+		        			</div>
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md mb-5" style="background-color:#121212;">
+		        			
+		        			<div class="md-bar text-light d-flex justify-content-between px-3 shadow-md align-items-center " style="background-color:#191919;">
+		        				<span>LightRoom</span>
+		        				<p class="m-0 p-0"><i class="fas fa-bars"></i></p>
+		        			</div>
+
+		        			<div class="interface d-flex justify-content-center flex-column align-content-center" style="height:500px;">
+		        				<div class="shadow container-fluid p-0 m-0">
+		        					<img src="{% static "images/home.jpg" %}" class="img-fluid">
+		        				</div>
+		        				<div class="p-2">
+		        					<div class="mb-2 mt-3 d-flex justify-content-around text-light text-md text-center">
+		        						<span><i class="fas fa-cut"></i><br><span style="font-size:11px;">Cut</span></span>
+		        						<span><i class="fas fa-paint-roller"></i><br><span style="font-size:11px;">paint</span></span>
+		        						<span><i class="fas fa-undo"></i><br><span style="font-size:11px;">Undo</span></span>
+		        						<span><i class="fas fa-trash"></i><br><span style="font-size:11px;">Delete</span></span>
+		        						<span><i class="fas fa-arrow-right"></i><br><span style="font-size:11px;">Save</span></span>
+		        					</div>
+		        				</div>
+		        			</div>
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md bg-white mb-5">
+		        			
+		        			<div class="md-bar text-md d-flex justify-content-between px-3 align-items-center bg-white">
+		        				<span>Out posts</span>
+		        				<p class="m-0 p-0"><i class="fas fa-arrow-right"></i></p>
+		        			</div>
+
+		        			<div class="interface">
+		        				<div class="container-fluid p-0 m-0">
+		        					<div class="card-fold shadow-md">
+					        			<img src="{% static "images/girl1.jpg" %}" class="card-img img-fold-up-1">
+					        			<div class="card-content content-fold-up-1"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+					        			<div class="card-control">
+					        				<div><p class="card-text" style="font-size:14px;">Click To view info</p></div>
+					        				<div class="fold-up-1"><span><i class="fas fa-hand-pointer"></i></span></div>
+					        			</div>
+					        		</div>
+					        		<div class="card-fold shadow-md">
+					        			<img src="{% static "images/hero.jpg" %}" class="card-img img-fold-up-2">
+					        			<div class="card-content content-fold-up-2"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+					        			<div class="card-control">
+					        				<div><p class="card-text" style="font-size:14px;">Click To view info</p></div>
+					        				<div class="fold-up-2"><span><i class="fas fa-hand-pointer"></i></span></div>
+					        			</div>
+					        		</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md bg-white mb-5">
+		        			
+		        			<div class="md-bar text-md d-flex justify-content-between px-3 align-items-center bg-white">
+		        				<span>Out posts</span>
+		        				<p class="m-0 p-0"><i class="fas fa-arrow-right"></i></p>
+		        			</div>
+
+		        			<div class="interface">
+		        				<div class="container-fluid p-0 m-0">
+		        					<div class="card shadow-md mt-5">
+					        			<div class="card-img-out-circle"><img src="{% static "images/girl1.jpg" %}" class="img-fluid"></div>
+					        			
+					        			<div class="card-body">
+					        				<p class="m-0 p-0 text-center"><span class="h5">Nancy K.</span><br><span class="font-sm">Our form secretary<br>But now the new ui designer</span></p>
+					        			</div>
+					        			<div class="d-flex justify-content-center mt-3 mb-3">
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        			</div>
+					        		</div>
+									<div class="card-fold shadow-md">
+					        			<img src="{% static "images/hero.jpg" %}" class="card-img img-fold-up-3">
+					        			<div class="card-content content-fold-up-3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+					        			<div class="card-control">
+					        				<div><p class="card-text" style="font-size:14px;">Click To view info</p></div>
+					        				<div class="fold-up-3"><span><i class="fas fa-hand-pointer"></i></span></div>
+					        			</div>
+					        		</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md bg-white mb-5">
+		        			
+		        			<div class="md-bar text-md d-flex justify-content-between px-3 align-items-center bg-white">
+		        				<span>Out posts</span>
+		        				<p class="m-0 p-0"><i class="fas fa-arrow-right"></i></p>
+		        			</div>
+
+		        			<div class="interface">
+		        				<div class="container-fluid p-0 m-0">
+		        					<div class="card shadow-md mt-5">
+					        			<div class="card-img-out"><img src="{% static "images/girl1.jpg" %}" class="img-fluid"></div>
+					        			
+					        			<div class="card-body">
+					        				<p class="m-0 p-0 text-center"><span class="h5">Nancy K.</span><br><span class="font-sm">Our form secretary<br>But now the new ui designer</span></p>
+					        			</div>
+					        			<div class="d-flex justify-content-center mt-3 mb-3">
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        				<div class="m-3 mt-1 mb-1"><span><i class="fas fa-shopping-cart"></i></span></div>
+					        			</div>
+					        		</div>
+										        		<div class="card-fold shadow-md">
+					        			<img src="{% static "images/girl2.jpg" %}" class="card-img img-fold-up-4">
+					        			<div class="card-content content-fold-up-4"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+					        			<div class="card-control">
+					        				<div><p class="card-text" style="font-size:14px;">Click To view info</p></div>
+					        				<div class="fold-up-4"><span><i class="fas fa-hand-pointer"></i></span></div>
+					        			</div>
+					        		</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md bg-white mb-5">
+		        			
+		        			<div class="md-bar text-dark d-flex justify-content-between px-3 align-items-center bg-white">
+		        				<span>Email</span>
+		        				<p class="m-0 p-0"></p>
+		        			</div>
+		        			<hr class="m-0 p-0">
+
+		        			<div class="interface">
+		        				<div class="container-fluid">
+		        					<p class="text-blue mb-5  mt-4" style="font-size:16px;">Sign-in your Account</p>
+		        					<form class="form-group" style="margin-top:70px;">
+		        						
+								        <div class="form-floated mt-5">
+								            <input type="email" class="form-control form-control-float-1">
+								            <label class="label-float form-label-1" for="floatingInput">Email address</label>
+								            <label for="floatingInput" class="label-base text-success"></label>
+								        </div>
+								        <div class="form-floated mt-5">
+								            <input type="Password" class="form-control form-control-float-10">
+								            <label class="label-float form-label-10" for="floatingInput">Password</label>
+								            <label for="floatingInput" class="label-base text-success"></label>
+								        </div> 
+								        <p class="text-blue" style="font-size:13px;">Create new account</p>
+
+								       	<div class="container text-right" style="margin-top:209px;">
+								       		<p class="text-right text-blue" style="text-align:right;">Next</p>
+								       	</div>
+								    </form>
+		        				</div>
+		        			</div>
+		        			
+		        		</div>
+		 	       	</div>
+		 	       	<div class="col">
+		        		<div class="phone shadow-md splashy mb-5">
+		        			<p class="text-light text-center">
+		        				<button class="btn btn-light btn-round"><i class="fab fa-github"></i></button>
+		        				<br><span class="text-light">GitHub</span></p>
+		        		</div>
+		 	       	</div>
+
+	 	       	</div>
+ 	       	</div>	            
+	    </div>
+
+
+
+	     <!-- page4 -->
+		    <div class="tab-pane fade" id="nav-Personal" role="tabpanel" aria-labelledby="nav-contact-tab">
+		    	<div class="container">
+		    		<p class="text-center heading-txt">About AppyHTML & me</p>
+		    	</div>
+	    	<div class="container conta">
+
+	    		
+			    		<div class="container cont-1" id="cont1">
+			    			<p class="">Am a programmer, I deal in many selectors for now due to the free lancing. I think if you<br> are too a free lancer it is better to know some numerous parts of programming like DATA SCIENCE,<br> WEB-DEV., APP AND SOFTWARE DEV etc so that you don't miss any job opportunity. </p>
+			    			<div class="container-fluid mot-photoy mt-5">
+			    				<div class="photoy"></div>
+			    			</div>
+			    			<div class="direction d-flex mt-2 justify-content-center buco">
+			    				<span class="cot1"><i class="fas fa-circle "></i></span><span class="cot2"><i class="fas fa-circle "></i></span><span class="cot3"><i class="fas fa-circle "></i></span>
+			    			</div>
+			    		</div>
+			    		<div class="container cont-2" id="cont2">
+			    			<p class="">Am located in Uganda, inside the capital city, <span class="text-puppy">Kampala</span>. In Uganda, it is had to find<br> a programming job. No matter your skill, age, Algorithms, its by luck. Maybe except teaching<br> others and yet few have a change and willing to learn. You can hardly find a person who knows<br> programming or has a computer below 20years of age.</p>
+			    			<div class="container-fluid mot-photoy mt-5">
+			    				<div class="photoy"></div>
+			    			</div>
+			    			<div class="direction d-flex mt-2 justify-content-center buco">
+			    				<span class="cot1"><i class="fas fa-circle "></i></span><span class="cot2"><i class="fas fa-circle "></i></span><span class="cot3"><i class="fas fa-circle "></i></span>
+			    			</div>
+			    		</div>
+			    		<div class="container cont-3" id="cont3">
+			    			<p class="">My skills are python <span class="text-puppy">85%</span>, javascript <span class="text-puppy">70%</span>, C++ <span class="text-puppy">65%</span>, HTML <span class="text-puppy">100%</span>, CSS< <span class="text-puppy">95%</span> and maybe<br> thats all. I know some many good frameworks , like Django, kivy, Matplotlib, Pandas, Numpy,<br> Sqlite3, Alogrithms and RegExp, Jquery, Vue, Boost, Pygame, they are very many and<br> ethical hacking KALI, Urllib, etc. I Love Coding very much.</p>
+			    			<div class="container-fluid mot-photoy mt-5">
+			    				<div class="photoy"></div>
+			    			</div>
+			    			<div class="direction d-flex mt-2 justify-content-center buco">
+			    				<span class="cot1"><i class="fas fa-circle "></i></span><span class="cot2"><i class="fas fa-circle "></i></span><span class="cot3"><i class="fas fa-circle "></i></span>
+			    			</div>
+			    		</div>
+			</div>
+
+			<div class="container">
+				<p class="t-blue h3 mb-4">AUTHETICATION </p>
+				<div class="row m-0 p-0 justify-content-center">
+					<div class="col-md-5">
+						<p class="heading-txt text-center">Signin for new user</p>
+						<form class="form-group" method="Post">
+                            {% csrf_token %}
+							<div class="form-floated mt-3" >
+					            {{formy.Username}}
+					            <label class="label-float form-label-4" for="floatingInput">Username</label>
+					            <label for="floatingInput" class="label-base text-secondary"></label>
+				          </div>
+				          <div class="form-floated mt-3">
+                                {{formy.Email}}
+					            <label class="label-float form-label-5" for="floatingInput">Email address</label>
+					            <label for="floatingInput" class="label-base text-secondary"></label>
+				          </div>
+				          <div class="form-group mt-3">
+                            {{formy.Descr}}
+				          </div>
+
+				          <button type="submit" class="btn btn-primary mt-3 mb-3">Submit authetication</button>
+						</form>
+					</div>
+				</div>
+				<div class="container mt-5 mb-5">
+			    	<p class="text-center h5">Do you want to contact me.</p>
+			    	<div class="container text-center mt-3">
+			    		<button class="btn-round btn-round-sm btn-blue"><i class="fab fa-twitter"></i></button>
+        				<button class="btn-round btn-round-sm btn-danger"><i class="fab fa-pinterest-p"></i></button>
+        				<button class="btn-round btn-round-sm btn-primary"><i class="fab fa-facebook-f"></i></button>
+        				<button class="btn-round btn-round-sm btn-success"><i class="fab fa-whatsapp"></i></button>
+        				<button class="btn-round btn-round-sm btn-dark"><i class="fab fa-github"></i></button>
+        				<button class="btn-round btn-round-sm btn-link"><i class="fas fa-globe"></i></button>
+        			</div>
+        			<p class="mt-3"><a href="#">moreinfo</a></p>
+			    </div>
+			</div>
+
+	    </div>
+
+	 
+
+
+
+    </div>
+    <!-- END OF HEART -->
+
+
+
+</div>
+
+
+<script type="text/javascript" src="{% static "js/website.js" %}"></script>
+
+</body>
+</html>
